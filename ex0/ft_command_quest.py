@@ -13,7 +13,8 @@ def main() -> None:
         i = 0
         for arg in sys.argv:
             if i == 0:
-                print(f"Program name: {sys.argv[i][2:]}")
+                print(f"Program name: {sys.argv[i]}")
+                print(f"Arguments received: {len(sys.argv) - 1}")
             else:
                 print(f"Argument {i}: {arg}")
             i += 1
