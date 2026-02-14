@@ -29,7 +29,7 @@ def curr_inv(inventory: dict, item_count: int) -> None:
     print("\n=== Current Inventory ===")
     for item in inventory:
         print(f"{item}: {inventory[item]} "
-              f"{"unit" if inventory[item] == 1 else "units"} "
+              f"{'unit' if inventory[item] == 1 else 'units'} "
               f"({(inventory[item] / item_count * 100):.2f} %)")
 
 
@@ -46,14 +46,14 @@ def inv_stat(inventory: dict) -> None:
             most_abundant_value = inventory[item]
             most_abundant_item, most_abundant_amount = item, inventory[item]
     print(f"Most abundant: {most_abundant_item} ({most_abundant_amount} "
-          f"{"unit" if most_abundant_amount == 1 else "units"})")
+          f"{'unit' if most_abundant_amount == 1 else 'units'})")
     least_abundant_value = most_abundant_value
     for item in inventory:
         if inventory[item] < least_abundant_value:
             least_abundant_value = inventory[item]
             least_abundant_item, least_abundant_amount = item, inventory[item]
     print(f"Least abundant: {least_abundant_item} ({least_abundant_amount} "
-          f"{"unit" if least_abundant_amount == 1 else "units"})")
+          f"{'unit' if least_abundant_amount == 1 else 'units'})")
 
 
 def item_categ(inventory: dict) -> None:
@@ -70,8 +70,8 @@ def item_categ(inventory: dict) -> None:
             abundance_categ["Moderate"][item] = inventory[item]
         else:
             abundance_categ["Scarce"][item] = inventory[item]
-    print(f"Moderate: {abundance_categ["Moderate"]}")
-    print(f"Scarce: {abundance_categ["Scarce"]}")
+    print(f"Moderate: {abundance_categ['Moderate']}")
+    print(f"Scarce: {abundance_categ['Scarce']}")
 
 
 def management_sugg(inventory: dict) -> None:
@@ -94,7 +94,7 @@ def dict_prop_demo(inventory: dict) -> None:
     print("\n=== Dictionary Properties Demo ===")
     print(f"Dictionary keys: {[item for item in inventory]}")
     print(f"Dictionary values: {[inventory[item] for item in inventory]}")
-    print(f"Sample lookup - 'sword' in inventory: {"sword" in inventory}")
+    print(f"Sample lookup - 'sword' in inventory: {'sword' in inventory}")
 
 
 def main() -> None:
