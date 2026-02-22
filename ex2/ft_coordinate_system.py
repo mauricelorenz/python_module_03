@@ -23,7 +23,7 @@ def parse_coordinates(coord_str: str) -> tuple | None:
     """Parse the passed string into a tuple.
 
     Args:
-        coord_str: String containing comma separated values
+        coord_str: The string containing comma separated values
 
     Returns:
         A tuple containing x, y and z variables
