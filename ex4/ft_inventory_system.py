@@ -30,7 +30,7 @@ def curr_inv(inventory: dict, item_count: int) -> None:
     for item in inventory:
         print(f"{item}: {inventory[item]} "
               f"{'unit' if inventory[item] == 1 else 'units'} "
-              f"({(inventory[item] / item_count * 100):.2f} %)")
+              f"({(inventory[item] / item_count * 100):.1f}%)")
 
 
 def inv_stat(inventory: dict) -> None:
